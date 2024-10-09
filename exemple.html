@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo Mejorado</title>
+    <style>
+        :root {
+            --text: #0f0f0f; /* Color del texto */
+            --background: #00F2EF; /* Color de fondo */
+            --primary: #003A70; /* Color primario */
+            --secondary: #4B0082; /* Color secundario */
+            --accent: #FF8C00; /* Color de acento */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de botones */
+        .btn {
+            background-color: var(--primary);
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+        .btn-secundario {
+            background-color: #F0F0F0;
+            color: var(--text);
+        }
+
+        .btn:hover {
+            background-color: #002f5c; /* Cambia el color en hover */
+        }
+
+        /* Estilo de campos de entrada */
+        .campo-entrada {
+            border: 1px solid #CED4DA;
+            border-radius: 4px;
+            padding: 12px;
+            width: 100%;
+            max-width: 400px; /* Limita el ancho en escritorio */
+            background-color: #FFFFFF;
+            color: var(--text);
+            font-size: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de menú de navegación */
+        .menu-navegacion {
+            background-color: transparent; /* Mantiene el fondo transparente */
+            padding: 10px;
+            width: 100%;
+            max-width: 600px; /* Tamaño máximo */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-navegacion a {
+            color: var(--text); /* Color del texto */
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .menu-navegacion a:hover {
+            color: var(--accent); /* Cambia el color en hover */
+        }
+
+        /* Apartado para color secundario */
+        .apartado-secundario {
+            background-color: var(--secondary);
+            color: #FFFFFF;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de slider */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .slide {
+            width: 100%;
+            border-radius: 5px;
+            display: none; /* Oculta las imágenes inicialmente */
+        }
+
+        .slide.active {
+            display: block; /* Muestra solo la imagen activa */
+        }
+
+        /* Flechas de navegación */
+        .flecha {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .flecha.izquierda {
+            left: 10px;
+        }
+
+        .flecha.derecha {
+            right: 10px;
+        }
+
+        /* Estilo del contenedor de las imágenes */
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px; /* Altura del slider */
+            overflow: hidden; /* Oculta contenido fuera de los límites */
+        }
+
+        .botones-adicionales {
+            display: inline-block; /* Inline block for buttons */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #003A70; /* Button color */
+            color: #FFFFFF; /* Text color */
+            text-align: center; /* Center text */
+            padding: 5px 15px; /* Padding for buttons */
+            font-size: 16px; /* Font size */
+            text-decoration: none; /* Remove underline */
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            margin: 10px 0; /* Space between buttons */
+            transition: background-color 0.3s ease; /* Transition effect */
+        }
+
+        .botones-adicionales:hover {
+            background-color: #00274D; /* Darker color on hover */
+        }
+	
+
+        /* Responsividad */
+        @media (max-width: 600px) {
+            .btn {
+                font-size: 16px; /* Tamaño en móvil */
+            }
+
+            .campo-entrada {
+                font-size: 14px; /* Tamaño en móvil */
+            }
+
+            .menu-navegacion a {
+                font-size: 12px; /* Tamaño en móvil */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejemplo de Estilo Mejorado</h1>
+
+    <!-- Menú de navegación -->
+    <nav class="menu-navegacion">
+        <a href="#">Inicio</a>
+        <a href="#">Historia</a>
+        <a href="#">Restauración</a>
+        <a href="#">Noticias</a>
+    </nav>
+
+    <!-- Botones -->
+    <button class="btn">Botón Principal</button>
+    <button class="btn btn-secundario">Botón Secundario</button>
+
+    <!-- Campos de entrada -->
+    <input type="text" class="campo-entrada" placeholder="Campo de entrada...">
+
+    <!-- Apartado para el color secundario -->
+    <div class="apartado-secundario">
+        <h2>Información Adicional</h2>
+        <p>Aquí puedes incluir cualquier información relevante.</p>
+    </div>
+
+    <!-- Slider de imágenes -->
+    <div class="slider">
+        <div class="container">
+            <img src="https://via.placeholder.com/600x300" class="slide active" alt="Imagen 1">
+        </div>
+        <button class="flecha izquierda">❮</button>
+        <button class="flecha derecha">❯</button>
+    </div>
+<a href="Activity 4 118af7eebf708021923ec206a7d2a312.html" class="botones-adicionales">Return to home</a>
+
+</body>
+</html>
